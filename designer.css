@@ -2,9 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    list-style: none; 
 }
 
 html {
@@ -14,16 +12,15 @@ html {
 
 header {
     padding: min(5vh, 4rem);
-    background-color: #9ec0c352;
+    background-color: #9ec0c3;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    top: 0;
     left: 0;
+    top: 0;
     z-index: 999;
-    box-shadow: 0 0.21rem 0.5rem rgb(26, 25, 25);
 }
 
 header i {
@@ -40,12 +37,13 @@ header nav ul li a {
   margin-right: 3.5em;
   text-decoration: none;
   font-size: 1.2rem;
-  color: rgba(255, 0, 0, 0.713);
+  color: rgba(174, 3, 3, 0.959);
 } 
 
 header nav ul li a:hover {
     color: rgb(18, 15, 173);
     transition: 0.9s;
+    cursor: pointer;
 }
 
 header button {
@@ -63,17 +61,17 @@ header button {
 header button:hover {
     color: white;
     transition: 0.8s;
-    font-size: 1em;
-    font-weight: 400;
+    cursor: pointer;
 }
 
 .section-01 {
-    padding: min(40vh, 10rem);
+    padding: min(25vh, 8rem);
     background-color: #7fa0a45d;
 }
 
 .div-01 {
-    display: block;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
@@ -84,12 +82,120 @@ header button:hover {
 }
 .div-01 h2 {
     font-size: 2.5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
 }
 .div-01 span {
-    color: rgb(210, 135, 5);
+    color: darkgoldenrod;
+}
+.div-01 span:hover {
+    color: red;
+    transition: 0.9s;
 }
 
-.div
+.div-01 button {
+    width: 8rem;
+    height: 1em;
+    background-color: black;
+    padding: 1.3rem;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+   
+}
+.div-01 button:hover {
+    color: white;
+    transition: 0.8s;
+    cursor: pointer;
+}
 
 
+.section-02  {
+    padding: min(4vh, 5rem);
+    background-color: #3a898f90;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.section-02  nav ul {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+}
+
+.section-02  nav ul li i {
+    margin-right: 3.5em;
+    text-decoration: none;
+    font-size: 1rem
+}
+
+.section-02  nav ul li i:hover {
+    cursor: pointer;
+    color: white;
+    transition: 0.8s;
+    translate: 10px 0px;
+}
+
+.section-03 {
+    padding: min(10vh, 8rem);
+    background-color: #7fa0a45d;    
+}
+.section-03 h2 {
+    font-size: 2.5rem;
+}
+
+.section-03 span {
+    color: darkgoldenrod;
+}
+
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.content img {
+    margin: 5rem auto;
+    width: 18rem;
+    display: block;
+    border-radius: 1rem; 
+}
+
+.content img:hover {
+    transition: 0.7s;
+    cursor: pointer;
+    translate: 0px 20px;
+    background: url();
+}
+
+
+
+
+footer {
+    padding: min(10vh, 4rem);
+    background-color: #6d73747d;
+    width: 100%; 
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center; 
+}
+
+footer i {
+    color: white;
+    font-size: 2em;
+    margin: 1rem;
+}
+
+footer i:hover {
+    color: #1e907e;
+    transition: 0.9s;
+}
