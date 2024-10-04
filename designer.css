@@ -37,7 +37,7 @@ header nav ul li a {
   margin-right: 3.5em;
   text-decoration: none;
   font-size: 1.2rem;
-  color: rgba(174, 3, 3, 0.959);
+  color: rgb(150, 0, 0);
 } 
 
 header nav ul li a:hover {
@@ -63,6 +63,19 @@ header button:hover {
     transition: 0.8s;
     cursor: pointer;
 }
+
+.whatsapp {
+  position: relative; /*Permite que elementos posicionados dentro da classe sejam posicionados em relação a ela*/
+}
+
+.whatsapp img {
+   position: fixed; /*mantém a imagem em uma posição fixa na tela, mesmo ao rolar a página*/
+   bottom: 20px; /*Define a distância da imagem em relação à parte inferior da tela*/
+   right: 20px; /*Define a distância da imagem em relação à direita da tela*/
+   width: 4rem; /*Define a largura da imagem como 5 unidades de rem (relativas ao tamanho da fonte)*/
+   height: auto; /*Ajusta a altura da imagem automaticamente para manter a proporção*/
+}
+
 
 .section-01 {
     padding: min(25vh, 8rem);
@@ -101,8 +114,8 @@ header button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    
-   
+    margin-top: 1.5rem; 
+    border-color: white; 
 }
 .div-01 button:hover {
     color: white;
@@ -113,9 +126,9 @@ header button:hover {
 
 .section-02  {
     padding: min(4vh, 5rem);
-    background-color: #3a898f90;
+    background-color: #87a1a290;
     width: 100%;
-    
+    flex-wrap: wrap;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,7 +139,7 @@ header button:hover {
    display: flex;
    justify-content: center;
    align-items: center;
-   
+   gap: 5px;
 }
 
 .section-02  nav ul li i {
@@ -144,7 +157,7 @@ header button:hover {
 
 .section-03 {
     padding: min(10vh, 8rem);
-    background-color: #7fa0a45d;    
+    background-color: #99adaf5d;    
 }
 .section-03 h2 {
     font-size: 2.5rem;
@@ -155,16 +168,20 @@ header button:hover {
 }
 
 
+
 .content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
+    gap: 1.7em;
+    z-index: 1;
+    position: relative;
 }
 
 .content img {
     margin: 5rem auto;
-    width: 18rem;
+    width: 17rem;
     display: block;
     border-radius: 1rem; 
 }
@@ -177,25 +194,66 @@ header button:hover {
 }
 
 
-
-
+/* Chamamos o footer para estilizar */
 footer {
-    padding: min(10vh, 4rem);
+    padding: min(8vh, 4rem);
     background-color: #6d73747d;
     width: 100%; 
 
     display: flex;
     justify-content: space-evenly;
     align-items: center; 
+    flex-wrap: wrap;
 }
 
 footer i {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 2em;
-    margin: 1rem;
+    margin: 0.5rem;
+    margin-top: 1.2em;
 }
 
 footer i:hover {
-    color: #1e907e;
-    transition: 0.9s;
+    color: #02473d;
+    transition: 1s;
+}
+
+
+
+@media (max-width: 830px) {
+    header i {
+        color: rgb(0, 0, 0);
+        font-size: 3em;
+        z-index: 999;
+    }
+
+    header button {
+    width: 8rem;
+    height: 1em;
+    background-color: black;
+    border-radius: 2rem;
+    padding: 1.3rem;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+
+
+
+ .section-03 img {
+   margin: auto;
+ }
+
+ .whatsapp img {
+    width: 3rem;
+ }
+
+ .section-02  nav ul {
+    display: block;
+    flex-wrap: wrap;
+ }
+
+ 
 }
