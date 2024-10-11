@@ -39,7 +39,7 @@ header nav ul li a {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
-  color: rgb(150, 0, 0);
+  color: white;
 } 
 
 header nav ul li a:hover {
@@ -97,9 +97,9 @@ header button {
 
 
 
-.hamburger,
+.hamburguer,
 .close {
-    font-size: 24px;
+    font-size: 10px;
     background: none;
     border: none;
     color: white;
@@ -113,8 +113,12 @@ header button {
     margin-right: 20px;
     display: block;
     align-self: end;
+    color: white;
 }
 
+.close i {
+    color: white;
+}
 
 .flex {
     display: flex;
@@ -367,9 +371,9 @@ footer i:hover {
         display: none;
     }
 
-    .hamburger {
+    .hamburguer {
         display: block;
-        
+        color:white;
     }
 
     .mobile-menu {
@@ -380,6 +384,9 @@ footer i:hover {
        display: none;
     }
 
+    .divi {
+        display: none;
+    }
 
     .cad-mobile button {
         width: 14rem;
@@ -389,6 +396,10 @@ footer i:hover {
         color: white;
     }
 
+    .nav-links-mobile {
+        display: block;
+        list-style: none;
+    }
 
 
     .cad-mobile button a {
