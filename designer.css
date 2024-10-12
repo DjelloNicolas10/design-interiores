@@ -24,9 +24,20 @@ header {
     z-index: 999;
 }
 
-header i {
-    font-size: 4.8em;
+
+header > h1 {  /* Selecionamos aqui a cor da letra do nosso H1 ou seja, do nosso título */
+    color:black; /* chamamos a propriedade color e definimos uma cor em questão */ 
+    font-size: 2em; /*Tamanho da letra*/
 }
+
+    
+
+header > i {  /* Aqui estamos chamando nossa imagem para ser atribuídas alterações*/
+   font-size: 3em;
+}
+
+
+
 
 header nav ul{
   display: flex;
@@ -35,32 +46,49 @@ header nav ul{
 }
 
 header nav ul li a {
-  margin-right: 3.5em;
+  margin-right: 2em;
   text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1rem;
   color: white;
 } 
 
 header nav ul li a:hover {
-    color: rgb(18, 15, 173);
+    color:rgb(245, 201, 5);
     transition: 0.9s;
     cursor: pointer;
 
 }
 
-header button {
-    width: 6rem;
-    height: 1em;
-    background-color: black;
-    border-radius: 2rem;
-    padding: 1.3rem;
-    color: rgb(150, 0, 0);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 600;
+
+
+
+#btn-header {   /*Nossa ID do Botão de Login */
+    display: flex; /*  Resposável por colocar os itens na mesma linha (lado a lado) */
 }
+
+#btn-header > button { /* Aqui chamamos nossa ID e onde queremos fazer alterações, no caso o nosso BOTÃO (button)*/
+    padding: 8px; /*  Cuida do Preenchimento */
+    background-color: transparent; /* Aqui deixamos o fundo do Botão transparent, ou seja sem o fundo Branco que estava em primeiro plano */
+    border: none; /* None é usado para retirar algo, nesse caso a borda. */ 
+}
+
+#btn-header > button > a { /* Estamos chamando aqui nossa TAG de Link para alteração. */ 
+    display: flex; /* Resposável por colocar os itens na mesma linha (lado a lado)  */
+    align-items: center; /* Alinhar os itens para o centro */
+    gap: 5px;
+    color: white; /*Cor da letra */
+    text-decoration: none; /* Responsável por tirar o sublinhado que estava visível */
+    font-weight: 400; /* espessura da fonte */
+}
+
+#btn-header > button > a > img { /* Aqui estamos mexendo nO ICON do botão*/
+    width: 1.8rem; /* Largura */
+    height: auto; /* Tamanho */
+}
+
+
+
+
 
 
 
@@ -90,7 +118,9 @@ header button {
 }
 
 .nav-links-mobile li { /*listas da versão Mobile*/
-    border-bottom: 1px solid #787272; /*Bordar inferior de cada lista*/
+
+    /* border-bottom: 1px solid #787272; Bordar inferior de cada lista */  /*para retirar os traços em baixo das listas no mobile menu*/
+
     padding-bottom: 1.2rem; /*Tamanho da borda*/
 }
 
@@ -294,13 +324,14 @@ footer p {
    display: flex;
    justify-content: center;
    align-items: center;
+
 }
 
 footer i {
     color: rgb(255, 255, 255);
     font-size: 2em;
     margin: 0.5rem;
-    margin-top: 1.2em;
+    margin-top: 1.3em;
 }
 
 
@@ -314,20 +345,8 @@ footer i:hover {
 @media (max-width: 830px) {
     header i {
         color: rgb(0, 0, 0);
-        font-size: 3em;
+        font-size: 2em;
         z-index: 999;
-    }
-
-    header button {
-    width: 8rem;
-    height: 1em;
-    background-color: black;
-    border-radius: 2rem;
-    padding: 1.3rem;
-    color: red;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     }
 
 
@@ -338,12 +357,17 @@ footer i:hover {
  }
 
  .whatsapp img {
-    width: 2rem;
+    width: 3rem;
  }
 
  .section-02  nav ul {
     display: block;
     flex-wrap: wrap;
+ }
+
+ header nav ul li a {
+    color: white;
+    
  }
 }
 
@@ -355,18 +379,24 @@ footer i:hover {
 
     html {
         font-size: 12px;
-    }
-
-    /* header img {
-        width: 10rem;
-        height: auto;
-        } */
+    } 
 
 
-        header img {
-            width: 4em;
-            height: auto;
+        header i {
+           font-size: 2em;
             }
+
+    header > h1 {  /* Selecionamos aqui a cor da letra do nosso H1 ou seja, do nosso título */
+    color: black; /* chamamos a propriedade color e definimos uma cor em questão */ 
+    font-size: 1em; /*Tamanho da letra*/
+    
+}
+
+
+
+header h1 {
+    font-size: 1.2em;
+}
     .nav-links {
         display: none;
     }
@@ -388,6 +418,12 @@ footer i:hover {
         display: none;
     }
 
+    .nav-links-mobile {
+        font-size: 1em;
+        list-style: none;
+       align-self: center;
+    }
+
     .cad-mobile button {
         width: 14rem;
         height: 4rem;
@@ -396,10 +432,7 @@ footer i:hover {
         color: white;
     }
 
-    .nav-links-mobile {
-        display: block;
-        list-style: none;
-    }
+   
 
 
     .cad-mobile button a {
